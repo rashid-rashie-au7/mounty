@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mounty</title>
+    <title>Mounty Assesment</title>
+    <link rel="stylesheet" href="/css/formStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    Hello!
+
+    <div class="container">
+        <div class="title">
+            <div>Registration</div>
+            <div class="home-btn-cls">
+                <a href="/" class="home-btn"><i class="fa fa-home"></i>Home</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <form>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required name="name">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mobile</span>
+                        <input type="text" placeholder="Enter your Mobile" required name="mobile">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email" name="email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Street</span>
+                        <input type="text" placeholder="Flat No/Street" name="street" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Locality</span>
+                        <input type="text" placeholder="Locality" name="locality" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">City</span>
+                        <input type="text" placeholder="City" name="city" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">State</span>
+                        <input type="text" placeholder="State" name="state" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">City</span>
+                        <input type="number" placeholder="Pincode" name="pincode" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Cordinate Types</span>
+                        <input type="text" placeholder="Enter Cordinate Type" name="cordinate_type" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Cordinates</span>
+                        <input type="text" placeholder="Enter Cordinates" name="cordinates" required>
+                    </div>
+                </div>
+
+                <div style="width:100%; text-align: center;">
+                    <button type="submit" class="button"> Create User  </button>
+                </div>
+            </form>
+        </div>
 </body>
+
 </html>
