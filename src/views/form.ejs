@@ -13,7 +13,15 @@
 <body>
 
     <div class="container">
+        <%if(message.length > 0) {%>
+            <%console.log('msg=== ',message)%>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <div><%=message %></div>
+            </div>
+            <% } %>
         <div class="title">
+            
             <div>Registration</div>
             <div class="home-btn-cls">
                 <a href="/" class="home-btn"><i class="fa fa-home"></i>Home</a>
@@ -21,7 +29,7 @@
         </div>
 
         <div class="content">
-            <form>
+            <form method="POST" action="/newuser">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
@@ -54,14 +62,6 @@
                     <div class="input-box">
                         <span class="details">City</span>
                         <input type="number" placeholder="Pincode" name="pincode" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Cordinate Types</span>
-                        <input type="text" placeholder="Enter Cordinate Type" name="cordinate_type" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Cordinates</span>
-                        <input type="text" placeholder="Enter Cordinates" name="cordinates" required>
                     </div>
                 </div>
 
