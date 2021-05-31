@@ -21,8 +21,8 @@
                 <div class="dropdown">
                     <button class="dropbtn">Sort By <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="#">CreatedAt</a>
-                        <a href="#">Coordinate</a>
+                        <a href="/createdby">CreatedAt</a>
+                        <a href="coordinates">Coordinate</a>
                     </div>
                 </div>
             </div>
@@ -31,73 +31,57 @@
             <div className="content">
                 <div className="main">
                     <div class="user-card">
-                        <div class="cards">
-                            <h4>Name : Rashid
-                            </h4>
-
-                            <dl class="dlist-align">
-                                <dt>Mobile :</dt>
-                                <dd>
-                                    mobile
-                                </dd>
-                            </dl>
-
-                            <dl class="dlist-align">
-                                <dt>Email :</dt>
-                                <dd>
-                                    asd@g.com
-                                </dd>
-                            </dl>
-
-                            <dl class="dlist-align">
-                                <dt>Street :</dt>
-                                <dd>
-                                    address
-                                </dd>
-                            </dl>
-
-                            <dl class="dlist-align">
-                                <dt>Locality :</dt>
-                                <dd>
-                                    local
-                                </dd>
-                            </dl>
-
-                            <dl class="dlist-align">
-                                <dt>City :</dt>
-                                <dd>
-                                    banglr
-                                </dd>
-                            </dl>
-                            <dl class="dlist-align">
-                                <dt>State :</dt>
-                                <dd>
-                                    KA
-                                </dd>
-                            </dl>
-                            <dl class="dlist-align">
-                                <dt>Pincode :</dt>
-                                <dd>
-                                    123
-                                </dd>
-                            </dl>
-                            <dl class="dlist-align">
-                                <dt>Cordinate Type :</dt>
-                                <dd>
-                                    deg
-                                </dd>
-                            </dl>
-                            <dl class="dlist-align">
-                                <dt>Cordinates :</dt>
-                                <dd>
-                                    213
-                                </dd>
-                            </dl>
-                            <div class='btn-cls'>
-                                <button class="btn-card"><i class="fa fa-pencil"></i></i></button>
-                                <button class="btn-card"><i class="fa fa-trash"></i></button>
+                        <%if(userdata.length != 0) {%>
+                            <% userdata.forEach(ele => {%>
+                            <div class="cards">
+                                <h3 class ="text-align=center;"><%=ele.name %></h3>
+                                    <dl class="dlist-align">
+                                        <dt>Mobile :</dt>
+                                        <dd><%=ele.mobile%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Email :</dt>
+                                        <dd><%=ele.email%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Street :</dt>
+                                        <dd><%=ele.address.street%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Locality :</dt>
+                                        <dd><%=ele.address.locality%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>City :</dt>
+                                        <dd><%=ele.address.city%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>State :</dt>
+                                        <dd><%=ele.address.state%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Pincode :</dt>
+                                        <dd><%=ele.address.pincode%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Cordinate Type :</dt>
+                                        <dd><%=ele.address.cordinate_type%></dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Cordinates :</dt>
+                                        <dd><%=ele.address.coordinates%></dd>
+                                    </dl>
+                                <div class='btn-cls'>
+                                    <button class="btn-card"><i class="fa fa-pencil"></i></i></button>
+                                    <button class="btn-card"><i class="fa fa-trash"></i></button>
+                                </div>
                             </div>
-                        </div>
+                            <% }) %>
+                            <% } else{ %>
+                                <div class="empty-img">
+                                    <img src="/img/no_data.png" alt="">
+                                </div>
+                            <% } %>
                     </div>
                 </div>
             </div>

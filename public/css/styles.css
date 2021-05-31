@@ -71,11 +71,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    text-align: center;
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
     box-shadow: 2px 4px 8px 0 rgba(0.1, 0, 0, 0.4);
 }
+.cards h4{
+    justify-content: center;
 
+}
 .btn-cls {
     margin: 8px;
     text-align: right;
@@ -176,4 +180,11 @@ main {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.empty-img{
+    width: 90vw;
+    height: 90vh;
+    margin-top: 50px;
+    text-align: center;
 }
